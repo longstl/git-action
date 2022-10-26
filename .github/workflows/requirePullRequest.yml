@@ -1,0 +1,13 @@
+name: require pull request
+
+on:
+  push:
+    branches: ['*', '**']
+    branches-ignore: ['main','dev','master']
+  pull_request:
+    branches: ['*', '**']
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running!"
