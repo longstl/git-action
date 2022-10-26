@@ -2,10 +2,12 @@ name: require pull request
 
 on:
   push:
-    branches: ['*', '**']
-    branches-ignore: ['main','dev','master']
+    branches: 
+      - '*'
+      - '!master'
   pull_request:
-    branches: ['*', '**']
+    branches:
+      - '*'
 jobs:
   print:
     runs-on: ubuntu-latest
